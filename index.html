@@ -10,12 +10,15 @@
             color:#0E0E0F;
             text-align: center;
             max-width: 800px;
+            margin:  0 auto;
+            padding: 16px;
         }
         main{
             background-color: #0E0E0F;
             color:#FFD9ED;
             max-width: 800px;
-            margin  0 auto;0
+            margin:  0 auto;
+            padding: 16px;
 
         }
     </style>
@@ -27,10 +30,117 @@
     </header>
     
     </main>
+<img src=""  alt=""
 <h2>Meu primeiro post</h2>
 <p>Por: Isabely de Souza Santos</p>
 <p>Boa-vindas ao meu novo Blog! Aqui vou compartilhar dicas de 
     como fazer mini desenhos em croche e curioidades incluindo esse assunto.</p>
     <main>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toalha de Crochê em CSS</title>
+    <style>
+        body {
+            background-color: #f0e6d2;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            perspective: 800px;
+        }
+
+        /* Base da Toalha */
+        .toalha-croche {
+            width: 400px;
+            height: 400px;
+            background-color: #fffaf0;
+            border-radius: 50%;
+            position: relative;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15), 
+                        inset 0 0 20px rgba(218, 195, 160, 0.3);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 2px dashed #e6dfd3;
+        }
+
+        /* Camadas de pontos e rendas */
+        .camada {
+            position: absolute;
+            border-radius: 50%;
+            border: 4px double #dfd5c3;
+        }
+
+        .centro {
+            width: 40px;
+            height: 40px;
+            background-color: transparent;
+            border: 3px dashed #c4b9a6;
+        }
+
+        .anel-1 {
+            width: 120px;
+            height: 120px;
+            border: 6px dotted #c4b9a6;
+        }
+
+        .anel-2 {
+            width: 220px;
+            height: 220px;
+            border: 8px dashed #bfae93;
+        }
+
+        .anel-3 {
+            width: 320px;
+            height: 320px;
+            border: 5px dotted #bfae93;
+        }
+
+        /* Borda Rendada (Bicos do Crochê) */
+        .borda-renda {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            background-image: radial-gradient(circle, transparent 65%, #fffaf0 66%);
+            /* Cria o efeito ondulado dos bicos de crochê */
+            mask-image: radial-gradient(circle, black 68%, transparent 70%),
+                        repeating-conic-gradient(black 0% 3%, transparent 3% 6%);
+            -webkit-mask-image: radial-gradient(circle, transparent 68%, black 69%),
+                                repeating-conic-gradient(black 0% 4%, transparent 4% 8%);
+        }
+
+        /* Detalhes dos pontos vazados */
+        .pontos-vazados {
+            position: absolute;
+            width: 90%;
+            height: 90%;
+            border-radius: 50%;
+            background: repeating-conic-gradient(
+                from 0deg,
+                transparent 0deg 5deg,
+                rgba(215, 201, 179, 0.4) 5deg 6deg
+            );
+        }
+    </style>
+</head>
+<body>
+
+    <div class="toalha-croche">
+        <div class="pontos-vazados"></div>
+        <div class="camada anel-3"></div>
+        <div class="camada anel-2"></div>
+        <div class="camada anel-1"></div>
+        <div class="camada centro"></div>
+        <div class="borda-renda"></div>
+    </div>
+
 </body>
 </html>
